@@ -1,0 +1,4 @@
+esphome:
+  name: sonoffs26-1
+
+!include { file: sonoff_s26.yaml }
