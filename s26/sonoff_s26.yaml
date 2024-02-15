@@ -1,4 +1,7 @@
-### no hostname! this file is to be included in another file
+### warning: this esphome yaml uses variable $hostname, and depends on secrets.yaml
+
+esphome:
+  name: $hostname
 
 esp8266:
   board: esp01_1m
