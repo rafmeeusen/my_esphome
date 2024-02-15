@@ -1,5 +1,5 @@
 substitutions:
-  hostname: sonoffs26-1
+  hostname: sonoff-s26-1
 
 <<: !include sonoff_s26.yaml
 
