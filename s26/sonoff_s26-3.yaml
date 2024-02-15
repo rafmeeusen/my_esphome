@@ -1,0 +1,6 @@
+substitutions:
+  hostname: sonoffs26-3
+
+<<: !include sonoff_s26.yaml
+
+
