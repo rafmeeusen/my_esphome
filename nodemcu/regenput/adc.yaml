@@ -27,16 +27,6 @@ ads1115:
   - address: 0x48
 
 sensor:
-  - platform: adc
-    id: regenput_waterstand
-    pin: A0
-    name: "Regenput waterstand oud"
-    update_interval: 300s
-    unit_of_measurement: "mm"
-    accuracy_decimals: 0
-    filters:
-    - multiply: 3.3   # compensate internal divider on the board
-    - lambda: return (187.5*(x/0.150-4.0))/1;   # conversion Volt to mm
   - platform: ads1115
     multiplexer: 'A0_GND'
     name: "Regenput waterstand"
