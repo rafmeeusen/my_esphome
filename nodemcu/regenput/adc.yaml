@@ -29,14 +29,20 @@ ads1115:
 sensor:
   - platform: ads1115
     multiplexer: 'A0_GND'
-    name: "Regenput waterstand"
+    name: "Regenput ADC spanning"
+    id: adc_output
+    update_interval: 30s
     gain: 4.096
-    accuracy_decimals: 0
-    update_interval: 300s
+    unit_of_measurement: "V"
+    accuracy_decimals: 6
+  - platform: copy
+    source_id: adc_output
+    name: "Regenput waterstand"
     unit_of_measurement: "mm"
     filters:
-    - lambda: return (187.5*(x/0.150-4.0))/1;   # conversion Volt to mm
+    - lambda: return 12.5*(100.0*x - 60.0);   # conversion Volt to mm
     - round: 0
+    accuracy_decimals: 0
 
 web_server:
   port: 8080
