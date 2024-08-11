@@ -46,6 +46,7 @@ sensor:
     unit_of_measurement: "mm"
     filters:
     - lambda: return (187.5*(x/0.150-4.0))/1;   # conversion Volt to mm
+    - round: 0
 
 web_server:
   port: 8080
