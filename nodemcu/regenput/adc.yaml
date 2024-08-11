@@ -31,7 +31,7 @@ sensor:
     multiplexer: 'A0_GND'
     name: "Regenput ADC spanning"
     id: adc_output
-    update_interval: 30s
+    update_interval: 300s
     gain: 4.096
     unit_of_measurement: "V"
     accuracy_decimals: 6
